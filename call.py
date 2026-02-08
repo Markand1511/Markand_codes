@@ -9,34 +9,43 @@ def multi(a,b):
 
 def div(a,b):
 
-    if a and b==0:
+    if a or b==0:
         print("invalid number")
 
     else:
         return a/b
     
 while True:
+    try:
+        user=int(input("\n enter your first number : "))
 
-    user=int(input("\n enter your first number : "))
+    except ValueError:
+        print("\nother letters are not allow for operation please enter digits only ")   
+        
+        print("\n press 1 for +")
+        print("press 2 for -")
+        print("press 3 for *")
+        print("press 4 for /")
+        
+    try:
+        choice=int(input("\n enter your choice for operation : "))
 
-    print("\n press 1 for +")
-    print("\n press 2 for -")
-    print("\n press 3 for *")
-    print("\n press 4 for /")
+        user1=int(input(f"\n your first number is {[user]} now please enter your second number : "))
 
-    choise=int(input("\n enter your choise for operation : "))
-
-    user1=int(input("\n enter your second number : "))
+    except ValueError:
+        print("\nother letters are not allow for operation please enter digits only ")   
+        
     
+        if choice==1:
+            print(" your answer is : ",add(user,user1))
 
-    if choise==1:
-        print(" your answer is : ",add(user,user1))
+        elif choice==2:
+            print(" your answer is : ",sub(user,user1))
 
-    elif choise==2:
-        print(" your answer is : ",sub(user,user1))
-
-    elif choise==3:
-        print(" your answer is : ",multi(user,user1))
+        elif choice==3:
+            print(" your answer is : ",multi(user,user1))
     
-    else:
-        print(" your answer is : ",div(user,user1))
+        else:
+            print(" your answer is : ",div(user,user1))
+
+    
