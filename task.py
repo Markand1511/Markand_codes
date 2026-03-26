@@ -65,42 +65,49 @@
 #     f.seek(14)
 #     print(f.read())
 
-from functools import reduce
-a=[1,2,3,4,5,6,7,8,9,10]
-print(list(map(lambda x:x*x,a)))
-print(list(filter(lambda x: x%2==0,a)))
-b=[1,2,3,4,5,6,7,8,9,10]
-print(reduce(lambda x,y: x+y,b))
-a=b
-if a is b:
-    print('y')
-else:
-    print('n')
+# from functools import reduce
+# a=[1,2,3,4,5,6,7,8,9,10]
+# print(list(map(lambda x:x*x,a)))
+# print(list(filter(lambda x: x%2==0,a)))
+# b=[1,2,3,4,5,6,7,8,9,10]
+# print(reduce(lambda x,y: x+y,b))
+# a=b
+# if a is b:
+#     print('y')
+# else:
+#     print('n')
 
-def q(w):
-    def e():
-        print('1')
-        w()
-        print('3')
-    return e
+# def q(w):
+#     def e():
+#         print('1')
+#         w()
+#         print('3')
+#     return e
 
-@q
-def r():
-    print('2')
-r()
+# @q
+# def r():
+#     print('2')
+# r()
 
-print(type(r))
+# print(type(r))
 
-a='1'
-print(set(a))
-
-
+# a='1'
+# print(set(a))
 
 
+class q:
 
+    r='111'
 
+    def __init__(self,name):
+        self.name=name
 
+    def show(self,bal):
+        self.__bal=1111111
 
-
+z=q("123")
+print(z.name)
+print(z.r)
+print(q._z__show())
 
 

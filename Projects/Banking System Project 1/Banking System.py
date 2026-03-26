@@ -17,26 +17,50 @@ class bank:
         return self.balance
 
 
-# OBJECT 1
+# OBJECTS
 
 obj=bank(25000)
+obj2=bank(50000)
+
+
+# PASSWORD FOR ACCESS OBJECT 1
+
+
+def pas():
+    
+    user=input("\n\n[Object_1] Enter Your Bank Password Here : ")
+
+
+    while user != "pass@123":
+
+        print("\n\nWrong Password Try Again ")
+
+        user=input("\n\n[Object_1] Enter Your Bank Password Here : ")
+
+pas()
+
 
 # DEPOSIT PROCESS OF OBJECT 1
 
-while True:
+
+valid=False
+
+while not valid:
 
     try:
         
-        user_amount=int(input('\n[Object_1] Enter Your Deposit Value Here : '))
+        user_amount=int(input('\n\n[Object_1] Enter Your Deposit Value Here : '))
+
+        valid=True
 
     except :
 
-        print("\nIt Is Invalid Key So Please Enter Right Details For Your Bank Account.")
+        print("\n\nIt Is Invalid Key So Please Enter Right Details For Your Bank Account.")
 
         continue
 
     
-    if 100 < user_amount < 10000:
+    if 99 < user_amount < 10001:
 
         obj.deposit(user_amount)
         
@@ -44,20 +68,19 @@ while True:
 
         print('\nThis Is Your Total Bank Balance After Your Deposit : ',obj.get_value())
 
-    else:
                 
-        if user_amount < 100:
+    elif user_amount < 100:
 
-            print("\n\nYour Deposit Amount Are To Low.")
+        print("\n\nYour Deposit Amount Are To Low.")
 
-            print("\nNow This Is Your Total Bank Balance : ",obj.get_value())
+        print("\nNow This Is Your Total Bank Balance : ",obj.get_value())
 
 
-        elif user_amount > 10000:
+    elif user_amount > 10000:
 
-            print("\n\nYour Deposit Amount Are To High.")
+        print("\n\nYour Deposit Amount Are To High.")
 
-            print("\nNow This Is Your Total Bank Balance :",obj.get_value())
+        print("\nNow This Is Your Total Bank Balance :",obj.get_value())
 
 
 # WITHDRAW SELECTION  PROCESS OF OBJECT 1
@@ -65,34 +88,40 @@ while True:
 
     choice=str(input("\n\nDo you Want To Withdraw Your Money [Y/N] : ")).upper()
 
+
     while choice not in ['Y','N']:
 
         print("\nAnswer Only In [Y/N].")
 
         choice=str(input("\nDo you Want To Withdraw Your Money [Y/N] : ")).upper()
 
+
     if choice=="N":
 
         print("\n\nOk So This Is Your Total Bank Balance After Your Deposit : ",obj.get_value())
 
-        print("\nThank You , Have A Good Day \n")
-
-        
+        print("\n\nThank You , Have A Good Day \n")
+    
+            
 
 # WITHDRAW PROCESS OF OBJECT 1
 
 
-    if choice=="Y":
+    elif choice=="Y":
 
-        while True:
+        valid=False
+
+        while not valid:
 
             try:
     
                 user_amount=float(input('\n\n[Object_1] Enter Your Withdraw Value Here : '))
 
+                valid=True
+
             except :
 
-                print("\nIt Is Invalid Key So Please Enter Right Details For Your Bank Account.")
+                print("\n\nIt Is Invalid Key So Please Enter Right Details For Your Bank Account.")
 
                 continue
             
@@ -105,125 +134,153 @@ while True:
                 print(f'\n\nYou Just withdraw {user_amount} From Your Bank Account.')
 
                 print("\nThis Is Your Total Bank Balance After Your Withdraw : ",obj.get_value())
+
+
+            elif user_amount < 100:
+
+                print("\n\nYour Withdraw Amount Are To Low.")
+
+                print("\nNow This Is Your Total Bank Balance : ",obj.get_value())
+
+                    
+            elif user_amount > 10000:
+
+                print("\n\nYour withdraw Amount Are To High.")
+
+                print("\nNow This Is Your Total Bank Balance :",obj.get_value)
+
+
+
+
+
+# OBJECT 2 PROCESS
+
+# PASSWORD FOR ACCESS OBJECT 2
+
+def pas2():
+
+    user2=input("\n\n[Object_2] Enter Your Bank Password Here : ")
+
+
+    while user2 != "pass@1234":
+
+        print("\n\nWrong Password Try Again ")
+
+        user2=input("\n\n[Object_2] Enter Your Bank Password Here : ")
+
+pas2()
+
+
+# DEPOSIT PROCESS OF OBJECT 2
+
+valid=False
+
+while not valid:
+
+    try:
+        
+        user_amount2=int(input('\n\n[Object_2] Enter Your Deposit Value Here : '))
+
+        valid=True
+
+    except :
+
+        print("\n\nIt Is Invalid Key So Please Enter Right Details For Your Bank Account.")
+
+        continue
+
+    
+    if 100 < user_amount2 < 10000:
+
+        obj2.deposit(user_amount2)
+        
+        print(f'\n\nYou Just Deposited {user_amount2} To Your Bank Account.')
+
+        print('\nThis Is Your Total Bank Balance After Your Deposit : ',obj2.get_value())
+
+                
+    elif user_amount2 < 100:
+
+        print("\n\nYour Deposit Amount Are To Low.")
+
+        print("\nNow This Is Your Total Bank Balance : ",obj2.get_value())
+
+
+    elif user_amount2 > 10000:
+
+        print("\n\nYour Deposit Amount Are To High.")
+
+        print("\nNow This Is Your Total Bank Balance :",obj2.get_value())
+
+
+# WITHDRAW SELECTION PROCESS OF OBJECT 2
+
+
+    choice=str(input("\n\nDo you Want To Withdraw Your Money [Y/N] : ")).upper()
+
+
+    while choice not in ['Y','N']:
+
+        print("\nAnswer Only In [Y/N].")
+
+        choice=str(input("\nDo you Want To Withdraw Your Money [Y/N] : ")).upper()
+
+
+    if choice=="N":
+
+        print("\n\nOk So This Is Your Total Bank Balance After Your Deposit : ",obj2.get_value())
+
+        print("\n\nThank You , Have A Good Day \n")
+
+        break
             
-            else:
-
-                if user_amount < 100:
-
-                    print("\n\nYour Withdraw Amount Are To Low.")
-
-                    print("\nNow This Is Your Total Bank Balance : ",obj.get_value())
-
-                    
-                elif user_amount > 10000:
-
-                    print("\n\nYour withdraw Amount Are To High.")
-
-                    print("\nNow This Is Your Total Bank Balance :",obj.get_value)
-
-                    
-# OBJECT 2
-
-            obj2=bank(50000)
-
-
-# DEPOSIT  PROCESS OF OBJECT 2
-
-
-            while True:
-
-                try:
-
-                    user_amount2=float(input('\n\n[object_2] Enter Your Deposit Value Here : '))
-
-                except :
-
-                    print("\nIt Is Invalid Key So Please Enter Right Details For Your Bank Account.")
-
-                    continue
-
-
-                if 100 < user_amount2 < 10000:
-
-                    obj2.deposit(user_amount2)
-
-                    print(f'\n\nYou Just Deposited {user_amount2} To Your Bank Account.')
-
-                    print('\nThis Is Your Total Bank Balance After Your Deposit : ',obj2.get_value())
-
-                else:
-
-                    if user_amount2 < 100:
-
-                        print("\n\nYour Deposit Amount Are To Low.")
-
-                        print("\nNow This Is Your Total Bank Balance : ",obj2.get_value())
-
-
-                    elif user_amount2 > 10000:
-
-                        print("\n\nYour Deposit Amount Are To High.")
-
-                        print("\nNow This Is Your Total Bank Balance :",obj2.get_value())
-
-
-
-# WITHDRAW SELECTION  PROCESS OF OBJECT 2
-
-
-                choice=str(input("\n\nDo you Want To Withdraw Your Money [Y/N] : ")).upper()
-
-                while choice not in ['Y','N']:
-
-                    print("\nAnswer Only In [Y/N].")
-
-                    choice=str(input("\nDo you Want To Withdraw Your Money [Y/N] : ")).upper()
-
-                if choice=="N":
-
-                        print("\n\nOk So This Is Your Total Bank Balance After Your Deposit : ",obj2.get_value())
-
-                        print("\nThank You , Have A Good Day \n")
-
-                        
 
 # WITHDRAW PROCESS OF OBJECT 2
 
 
-                if choice=="Y":
+    if choice=="Y":
 
-                    while True:
+        valid=False
 
-                        try:
+        while not valid:
 
-                            user_amount2=float(input('\n\n[Object_2] Enter Your Withdraw Value Here : '))
+            try:
+    
+                user_amount2=float(input('\n\n[Object_2] Enter Your Withdraw Value Here : '))
 
-                        except :
+                valid=True
 
-                            print("\nIt Is Invalid Key So Please Enter Right Details For Your Bank Account.")
+            except :
 
-                            continue
+                print("\n\nIt Is Invalid Key So Please Enter Right Details For Your Bank Account.")
+
+                continue
 
 
-                        if 100 < user_amount2 < 10000 and user_amount2 < obj2.get_value():
+            if 100 < user_amount2 < 10000 and user_amount2 < obj2.get_value():
 
-                            obj2.withdraw(user_amount2)
+                obj2.withdraw(user_amount2)
 
-                            print(f'\n\nYou Just withdraw {user_amount2} From Your Bank Account.')
+                print(f'\n\nYou Just withdraw {user_amount2} From Your Bank Account.')
 
-                            print("\nThis Is Your Total Bank Balance After Your Withdraw : ",obj2.get_value())
+                print("\nThis Is Your Total Bank Balance After Your Withdraw : ",obj2.get_value())
 
-                        else:
+                break
 
-                            if user_amount2 < 100:
 
-                                print("\n\nYour Withdraw Amount Are To Low.")
+            elif user_amount2 < 100:
 
-                                print("\nNow This Is Your Total Bank Balance : ",obj2.get_value())
+                print("\n\nYour Withdraw Amount Are To Low.")
 
-                                                             
-                            elif user_amount2 > 10000:
+                print("\nNow This Is Your Total Bank Balance : ",obj2.get_value())
 
-                                print("\n\nYour withdraw Amount Are To High.")
+                break
 
-                                print("\nNow This Is Your Total Bank Balance :",obj2.get_value())
+                    
+            elif user_amount2 > 10000:
+
+                print("\n\nYour withdraw Amount Are To High.")
+
+                print("\nNow This Is Your Total Bank Balance :",obj2.get_value)
+
+                break
