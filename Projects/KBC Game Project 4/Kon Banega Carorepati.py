@@ -53,23 +53,21 @@ def game():
     print(f"\nNow This Is Your Final Score :- {score}")
 
 
-    restart=input("Do You Want To Play Again ['Y','N'] : ").upper()
-
+    restart = input("\n\nDo You Want To Play Again ['Y','N'] : ").upper() 
 
     while restart not in ['Y','N']:
 
-        print("Please Type Only Y Or N ")
+        print("\n\nPlease Type Only Y Or N ")
 
-        restart=input("Do You Want To Play Again ['Y','N'] : ").upper()
+        restart=input("\n\nDo You Want To Play Again ['Y','N'] : ").upper()
         
 
-    if restart=='Y':
+    if restart == 'Y':
 
         game()
 
-    elif restart=='N':
+    elif restart == 'N':
 
-        print(f"Good Process You Literally Scored :- {score}, Have A Good Day")
-        
+        print(f"\nGood Process You Literally Scored :- {score}, Have A Good Day")
 
 game()

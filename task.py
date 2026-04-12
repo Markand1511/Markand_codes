@@ -95,19 +95,17 @@
 # print(set(a))
 
 
-class q:
+# class q:
 
-    r='111'
+#     r='111'
 
-    def __init__(self,name):
-        self.name=name
+#     def __init__(self,name):
+#         self.name=name
 
-    def show(self,bal):
-        self.__bal=1111111
+#     def show(self,bal):
+#         self.__bal=1111111
 
-z=q("123")
-print(z.name)
-print(z.r)
-print(q._z__show())
-
-
+# z=q("123")
+# print(z.name)
+# print(z.r)
+# print(q._z__show())

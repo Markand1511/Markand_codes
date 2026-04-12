@@ -127,7 +127,7 @@ while not valid:
             
         
 
-            if 100 < user_amount < 10000 and user_amount < obj.get_value():
+            if 99 < user_amount < 10001 and user_amount < obj.get_value():
 
                 obj.withdraw(user_amount)
 
@@ -190,7 +190,7 @@ while not valid:
         continue
 
     
-    if 100 < user_amount2 < 10000:
+    if 99 < user_amount2 < 10001:
 
         obj2.deposit(user_amount2)
         
@@ -257,7 +257,7 @@ while not valid:
                 continue
 
 
-            if 100 < user_amount2 < 10000 and user_amount2 < obj2.get_value():
+            if 99 < user_amount2 < 10001 and user_amount2 < obj2.get_value():
 
                 obj2.withdraw(user_amount2)
 
