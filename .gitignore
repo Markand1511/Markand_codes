@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Django
 *.pyc
 __pycache__/
@@ -25,3 +26,14 @@ Thumbs.db
 *.egg-info/
 dist/
 build/
+=======
+.venv/
+.venv*/
+venv/
+env/
+__pycache__/
+*.pyc
+.env
+.vscode/
+db.sqlite3
+>>>>>>> 203111804db522b28d4127b89fc6b052747f9306
